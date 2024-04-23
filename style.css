@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto , sans-serif;
+}
+body{
+    background-color: lavenderblush;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+   position: absolute;
+
+}
+h1{
+    text-align: center;
+    margin-top: 1.5rem;
+
+}
+.calculator{
+    background-color: rgb(32, 31, 31);
+    width: 600px;
+   position: relative;
+   top: 25%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 2rem;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+   transition: all 0.5s;
+   animation: moving 1s linear;
+}
+.calculator input{
+    width: 70%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #fff;
+    
+}
+.calculator button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.display{
+
+    width: 600px;
+    height: 100px;
+   position: relative;
+   top: 30%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 5px;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 10px;
+   transition: all 0.5s;
+   animation: moving1 1s linear;
+
+
+}
+.display .data{
+    width: 95px;
+    height: 85px;
+    background-color:  rgb(32, 31, 31);
+    border-radius: 5px;
+    border: 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+
+
+}
+.data span , .data p{
+    color: white;
+   
+}
+.data span{
+    margin-top: 1rem;
+}
+.data p{
+    margin-top: 0.5rem;
+}
+
+@keyframes moving {
+    from{
+      top: 0%;
+      opacity: 0;
+    }
+    to{
+        top: 25%;
+      opacity: 1;
+    }
+}
+@keyframes moving1 {
+    from{
+        top: 0%;
+        opacity: 0;
+      }
+      to{
+          top: 30%;
+        opacity: 1;
+      }
+}
+
+@media screen and (max-width:600px){
+    .calculator{
+        width: 400px;
+    }
+    .display{
+        width: 400px;
+    }
+    .calculator input {
+        width: 60%;
+    }
+    .calculator button{
+        padding: 8px 16px;
+    }
+}
